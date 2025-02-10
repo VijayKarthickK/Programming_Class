@@ -1,1 +1,39 @@
-Hello World!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baggage Weight Checker</title>
+</head>
+<body>
+
+
+    <p>Excercise 1:</p>
+        <p>Create a page with a button and input</p>
+        <p>When user clicks submit,</p>
+        <p>If the weight is over 15kg, it should alert the user.</p>
+
+    <p>Please enter your baggage weight:</p>
+    <input type="text" id="bw" width="6">
+    <button onclick="doIt()">Submit</button>
+
+    <script>
+        function doIt() {
+            // Get the baggage weight entered by the user
+            const weight = parseFloat(document.getElementById("bw").value);
+
+            // Check if the weight is a number and over the limit
+            if (isNaN(weight)) {
+                alert("Please enter a valid number for the weight.");
+            } else if (weight > 15) {
+                alert("Your bag is overweight!");
+            } else {
+                alert("Your bag is within the weight limit.");
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
